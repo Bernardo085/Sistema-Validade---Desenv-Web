@@ -1,0 +1,276 @@
+.kpi-card {
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+}
+
+.kpi-card.border-red {
+  border-color: #fecaca;
+}
+
+.kpi-card.border-red-dark {
+  border-color: #fca5a5;
+}
+
+.kpi-icon,
+.report-icon,
+.timeline-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.kpi-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+}
+
+.kpi-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.kpi-icon.blue,
+.kpi-badge.blue,
+.report-icon.blue {
+  background: var(--blue-bg);
+  color: var(--blue);
+}
+
+.kpi-icon.yellow,
+.report-icon.yellow {
+  background: var(--yellow-bg);
+  color: var(--yellow);
+}
+
+.kpi-badge.yellow {
+  background: var(--yellow-bg);
+  color: #b45309;
+}
+
+.kpi-icon.red,
+.kpi-badge.red {
+  background: var(--red-bg);
+  color: var(--red);
+}
+
+.kpi-icon.red-dark,
+.kpi-badge.red-dark {
+  background: #fee2e2;
+  color: var(--red-dark);
+}
+
+.kpi-badge,
+.timeline-tag {
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.kpi-badge {
+  padding: 4px 8px;
+}
+
+.kpi-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0 0 6px;
+  font-weight: 500;
+}
+
+.kpi-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.panel-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.panel-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.panel-header h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.panel-header svg,
+.report-chevron svg {
+  width: 20px;
+  height: 20px;
+  color: var(--text-muted);
+}
+
+.report-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  border-color: var(--border-light);
+}
+
+.report-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+}
+
+.report-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.report-icon.green {
+  background: var(--green-bg);
+  color: var(--green);
+}
+
+.report-text h3 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.report-text p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.timeline-body {
+  padding: 20px 24px;
+}
+
+.timeline-list {
+  position: relative;
+  padding-left: 4px;
+}
+
+.timeline-list::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 32px;
+  padding-bottom: 24px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  z-index: 1;
+}
+
+.timeline-dot.red {
+  background: var(--red);
+  box-shadow: 0 0 0 2px var(--red-bg);
+}
+
+.timeline-dot.green {
+  background: var(--green);
+  box-shadow: 0 0 0 2px var(--green-bg);
+}
+
+.timeline-dot.purple {
+  background: var(--purple-tag);
+  box-shadow: 0 0 0 2px var(--purple-bg);
+}
+
+.timeline-tag {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.timeline-tag.red {
+  background: var(--red-bg);
+  color: var(--red);
+}
+
+.timeline-tag.green {
+  background: var(--green-bg);
+  color: #16a34a;
+}
+
+.timeline-tag.purple {
+  background: var(--purple-bg);
+  color: var(--purple-tag);
+}
+
+.timeline-time {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.timeline-title {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-heading);
+  line-height: 1.35;
+}
+
+.timeline-detail,
+.timeline-user {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.timeline-detail {
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+
+.timeline-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.timeline-footer {
+  padding: 16px 24px 20px;
+  border-top: 1px solid var(--border-light);
+}
+
+.empty-dashboard-message {
+  margin: 0;
+  padding: 12px 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
