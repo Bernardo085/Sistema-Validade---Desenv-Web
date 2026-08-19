@@ -1,16 +1,68 @@
-# React + Vite
+# Sistema de Gerenciamento de Validade de Produtos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema full-stack para controle de validade de produtos, voltado para pequenos e médios comércios. Automatiza o acompanhamento de lotes, gera alertas de vencimento e centraliza indicadores de estoque em um dashboard.
 
-Currently, two official plugins are available:
+> Projeto acadêmico desenvolvido durante o curso de Ciência da Computação (UNIFOR).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<!-- Adicione aqui 1-2 prints ou um GIF do dashboard/telas principais. Isso é o que mais chama atenção de quem abre o repositório. -->
+<!-- ![dashboard](caminho/para/imagem.png) -->
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Autenticação de usuários com JWT e controle de acesso por papel (role-based access)
+- CRUD completo de produtos, categorias, lotes e movimentações de estoque
+- Verificação automática diária de validade (job agendado com `node-cron`), com atualização de status dos lotes
+- Geração de alertas com níveis de severidade (crítico / atenção)
+- Dashboard com indicadores em tempo real: lotes ativos, vencendo em breve, vencidos e alertas pendentes
+- Relatórios filtráveis por data, produto e status
 
-## Expanding the ESLint configuration
+<!-- Se/quando implementar exportação em PDF/CSV ou lógica FEFO, adicione aqui -->
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tecnologias
+
+**Backend:** Node.js • Express • TypeScript • MongoDB (Mongoose) • JWT • bcrypt • node-cron
+**Frontend:** React • TypeScript • Vite • React Router • Bootstrap
+
+## Arquitetura
+
+O backend segue uma arquitetura em camadas:
+
+```
+routes → controllers → services → repositories → models
+                ↓
+         dtos (request/response) + mappers
+```
+
+Essa separação isola regras de negócio (services) do acesso a dados (repositories) e da camada HTTP (controllers), facilitando manutenção e testes.
+
+## Como rodar o projeto
+
+### Pré-requisitos
+- Node.js 18+
+- MongoDB (local ou Atlas)
+
+### Backend
+```bash
+cd backend
+npm install
+# configure as variáveis de ambiente (ver .env.example, se existir)
+npm run dev
+```
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+<!-- Se houver variáveis de ambiente necessárias (ex: MONGO_URI, JWT_SECRET), documente aqui -->
+
+## Status do projeto
+
+Em desenvolvimento — próximos passos incluem [ex: exportação de relatórios, lógica de priorização FEFO, testes automatizados].
+
+## Autor
+
+Bernardo Pinheiro Guerra Ramos
+[LinkedIn](https://www.linkedin.com/in/bernardopinheiroguerra/) • [GitHub](https://github.com/Bernardo085)
